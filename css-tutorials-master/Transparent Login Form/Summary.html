@@ -1,0 +1,81 @@
+<div class="main" *ngIf="listOfMyTicket">
+  <nz-divider nzOrientation="left" nzText={{listOfMyTicket.tgName}}></nz-divider>
+  <div nz-row [nzGutter]="[16, 48]">
+    <div nz-col class="gutter-row" [nzSpan]="4"><div class="inner-box">工单编号</div></div>
+    <div nz-col class="gutter-row" [nzSpan]="3"><div class="inner-box">工单类型</div></div>
+    <div nz-col class="gutter-row" [nzSpan]="3"><div class="inner-box">工单等级</div></div>
+    <div nz-col class="gutter-row" [nzSpan]="3"><div class="inner-box">工单状态</div></div>
+    <div nz-col class="gutter-row" [nzSpan]="3"><div class="inner-box">责任人</div></div>
+    <div nz-col class="gutter-row" [nzSpan]="3"><div class="inner-box">创建人</div></div>
+    <div nz-col class="gutter-row" [nzSpan]="5"><div class="inner-box">责任人滞留时间</div></div>
+
+    <div nz-col class="gutter-row" [nzSpan]="4"><div class="inner-box">{{listOfMyTicket.tgCode}}</div></div>
+    <div nz-col class="gutter-row" [nzSpan]="3"><div class="inner-box">{{listOfMyTicket.tgTypeId | ticketType}}</div></div>
+    <div nz-col class="gutter-row" [nzSpan]="3"><div class="inner-box">{{listOfMyTicket.tgLevelId | ticketLevel}}</div></div>
+    <div nz-col class="gutter-row" [nzSpan]="3"><div class="inner-box">{{listOfMyTicket.tgStatus | ticketStatus}}</div></div>
+    <div nz-col class="gutter-row" [nzSpan]="3"><div class="inner-box">{{listOfMyTicket.operateUserList}}</div></div>
+    <div nz-col class="gutter-row" [nzSpan]="3"><div class="inner-box">{{listOfMyTicket.createUser}}</div></div>
+    <div nz-col class="gutter-row" [nzSpan]="5"><div class="inner-box">{{listOfMyTicket.archiveTime}}</div></div>
+  </div>
+  <nz-divider ></nz-divider>
+  
+  <div nz-row [nzGutter]="[16, 36]">
+    <div nz-col class="gutter-row1" [nzSpan]="8">
+     <label>创建人联系方式:</label>
+      <span>{{listOfMyTicket.archiveTime}}</span>
+    </div>
+    <div nz-col class="gutter-row1" [nzSpan]="8">
+      <label>创建人部门:</label>
+      <span>某某部门</span>
+    </div>
+    <div nz-col class="gutter-row1" [nzSpan]="8">
+      <label>创建人时间:</label>
+      <span>某某时间</span>
+    </div>
+    <div nz-col class="gutter-row1" [nzSpan]="8">
+      <label>网络一级分类:</label>
+       <span>126389498</span>
+     </div>
+     <div nz-col class="gutter-row1" [nzSpan]="8">
+       <label>网络二级分类:</label>
+       <span>某某部门</span>
+     </div>
+     <div nz-col class="gutter-row1" [nzSpan]="8">
+      <label>网络三级分类:</label>
+      <span>某某部门</span>
+     </div>
+     <div nz-col class="gutter-row1" [nzSpan]="8">
+      <label>处理时限:</label>
+      <span>某某</span>
+     </div>
+
+     <div nz-col class="gutter-row2" [nzSpan]="24" >
+      <label>内容描述:</label>
+      <textarea rows="5"  readonly="true" >只可读</textarea>
+     </div>
+
+
+     <div nz-col class="gutter-row2" [nzSpan]="18">
+      <label>附件:</label>
+     <div style="display: flex;flex-direction: column;">
+      <button nz-button nzType="primary">附件1.txt</button>
+      <button nz-button nzType="primary">附件2.txt</button>
+    </div>
+     </div>
+
+
+   
+  </div>
+
+  <div nz-row nzJustify="center" style="margin-top: 40px;">
+    <div nz-col class="gutter-row3" [nzSpan]="4">
+      <button nz-button nzType="primary">
+       返回
+       
+      </button>
+    </div>
+   </div>
+  
+
+
+</div>
