@@ -263,11 +263,6 @@ let apiList = [
       {
         zh: 'Open Schema',
         url: 'openschema/openschema'
-      },
-      
-      {
-        zh: 'Share Menu',
-        url: 'share_menu/share_menu'
       }
     ]
   }, {
